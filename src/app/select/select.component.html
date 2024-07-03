@@ -1,0 +1,11 @@
+<div [formGroup]="formGroup">
+    <label *ngIf="label" for="select">{{ label }}</label>
+    <select id="select" [formControl]="formControl">
+        <option *ngIf="initialOption" value="">{{
+            initialOption
+            }}</option>
+        <option [value]="option" *ngFor="let option of options">{{
+            option
+            }}</option>
+    </select>
+</div>

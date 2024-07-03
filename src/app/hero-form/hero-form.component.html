@@ -1,0 +1,9 @@
+<form [formGroup]="fg" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="name" />
+    <input type="text" formControlName="alterEgo" />
+    <app-select formControlName="power" [options]="powers">
+    </app-select>
+    <button type="submit" [disabled]="!formStatus">
+        Submit
+    </button>
+</form>
